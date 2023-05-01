@@ -14,6 +14,11 @@ RSpec.describe User, type: :model do
       expect(user).to_not be_valid
     end
 
+    it 'should not valid if email is not present' do 
+      user.email = nil 
+      expect(user).to_not be_valid
+    end
+
     it 'should not valid if name is not unique' do 
       User.create!(name: 'John', email: 'john@gmail.com', password: 'password')
       user.name = 'John'
