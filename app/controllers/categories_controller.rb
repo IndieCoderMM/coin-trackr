@@ -2,12 +2,14 @@ class CategoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @categories = current_user.categories.includes(:expenses).all 
-        @total_expense = Expense.joins(:categories).where(categories: @categories).distinct.sum(:amount)
+        @categories = current_user.categories.includes(:expenses).all
+        @unique_expenses = Expense.joins(:categories).where(categories: @categories).distinct
+        @total_expense = @unique_expenses.sum(:amount)
     end
 
     def show
         @category = Category.includes(:expenses).find(params[:id])
+        @expenses = @category.expenses.order(updated_at: :desc)
     end
 
     def new 
@@ -25,6 +27,14 @@ class CategoriesController < ApplicationController
             flash[:alert] = 'Please try again!'
             render :new 
         end
+    end
+
+    def destroy
+        @category = Category.find(params[:id])
+        @category.destroy
+        
+        flash[:success] = 'Deleted a category item!'
+        redirect_to categories_path
     end
 
     private

@@ -4,7 +4,7 @@
     <% else %>
         <button type="button" class="nav-btn"><i class="fa fa-bars"></i></button>
     <% end %>
-    <h1><%= title %></h1>
+    <h1><%= title.upcase %></h1>
     <% if user_signed_in? %>
         <%= button_to  content_tag(:i, "", class: "fa-solid fa-right-from-bracket"), destroy_user_session_path, method: :delete, class: "nav-btn text-right" %>
     <% elsif controller_name != 'sessions' %>
@@ -18,4 +18,11 @@
 <% end %>
 <% if alert %>
     <div class="alert alert-danger"><%= alert %></div>
+<% end %>
+<% flash.each do |key, value| %>
+  <% if key == "success" %>
+    <div class="alert alert-success"><%= value %></div>
+  <% elsif key == "error" %>
+    <div class="alert alert-danger"><%= value %></div>
+  <% end %>
 <% end %>

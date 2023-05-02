@@ -11,7 +11,7 @@
 
   <div class="form-group">
     <%= form.label :category_ids, "Categories" %>
-    <%= form.collection_select :category_ids, Category.all, :id, :name, {selected: @category.id}, {class: 'form-control', multiple: true, required: true} %>
+    <%= form.collection_select :category_ids, @categories, :id, :name, {selected: @category.id}, {class: 'form-control', multiple: true, required: true} %>
   </div>
 
   <%= form.submit "Save", class: 'btn btn-primary' %>
