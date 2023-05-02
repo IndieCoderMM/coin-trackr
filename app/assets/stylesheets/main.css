@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #3778c2;
+  --dark-blue: #225a9b;
+  --secondary: #5fb523;
+  --dark-green: #4c9717;
+  --dark: #434b54;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Button styles  */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: solid 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-blue);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-outline:hover {
+  background-color: var(--secondary);
+  color: #333;
+}
