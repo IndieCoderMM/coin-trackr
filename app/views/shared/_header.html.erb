@@ -1,0 +1,9 @@
+<header class="main-header">
+    <% if back_link %>
+        <%= link_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left") + "Back", back_link %>
+    <% else %>
+        <button type="button" class="menu-btn"><i class="fa fa-bars"></i></button>
+    <% end %>
+    <h1><%= title %></h1>
+    <%= button_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left") + "Log Out", destroy_user_session_path, method: :delete %>
+</header>
