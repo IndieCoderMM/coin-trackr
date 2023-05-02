@@ -13,16 +13,41 @@
         <%= link_to content_tag(:i, "", class: "fa-solid fa-user-plus"), new_user_registration_path, class: "nav-btn text-right" %>
     <% end %>
 </header>
-<% if notice %>
-    <div class="alert alert-info"><%= notice %></div>
-<% end %>
-<% if alert %>
-    <div class="alert alert-danger"><%= alert %></div>
-<% end %>
-<% flash.each do |key, value| %>
-  <% if key == "success" %>
-    <div class="alert alert-success"><%= value %></div>
-  <% elsif key == "error" %>
-    <div class="alert alert-danger"><%= value %></div>
-  <% end %>
+
+<%= render 'shared/alert' %>
+
+<% if user_signed_in? %>
+<div class="side-menu">
+  <div class="side-header">
+    <button type="button" class="nav-btn"><i class="fa fa-bars"></i></button>
+    <h1 class="brand">CoinTrackr</h1>
+  </div>
+  <div class="profile-container">
+    <div class="user-icon">
+      <i class="fa-solid fa-user "></i>
+    </div>
+    <p class="user-name"><%= current_user.name %></p>
+  </div>
+
+  <div class="side-actions">
+    <div class="action-group">
+    <div class="action-icon">
+      <i class="fa-solid fa-user"></i>
+    </div>
+      <p>Account Setting</p>
+    </div>
+    <div class="action-group">
+    <div class="action-icon">
+      <i class="fa-solid fa-user"></i>
+    </div>
+      <p>Account Setting</p>
+    </div>
+    <div class="action-group">
+    <div class="action-icon">
+      <i class="fa-solid fa-user"></i>
+    </div>
+      <p>Account Setting</p>
+    </div>
+  </div>
+</div>
 <% end %>

@@ -1,0 +1,52 @@
+.side-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  background-color: var(--primary);
+  color: #fff;
+  z-index: 10;
+}
+
+.side-header {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.side-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.action-group p {
+  padding: 1rem;
+  border-bottom: solid 1px #fff;
+}
