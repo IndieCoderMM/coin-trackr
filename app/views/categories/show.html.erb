@@ -1,0 +1,11 @@
+<%= render 'shared/header', title: @category.name, back_link: categories_path %>
+<section class="container">
+<div class="category-header">
+    <p>Total Expense</p>
+    <p><%= number_to_currency(@category.total_expense) %></p>
+</div>
+
+<div class="action-container">
+    <%= link_to "Add Expense", new_category_path, class: "action-button" %>
+</div>
+</section>

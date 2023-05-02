@@ -1,10 +1,14 @@
 <%= render 'shared/header', title: "Categories", back_link: false %>
 <section class="container">
-<ul>
+<div class="category-header">
+    <p>Total Expense</p>
+    <p><%= number_to_currency(@categories.map(&:total_expense).sum) %></p>
+</div>
+<div class="category-container">
     <% @categories.each do |category| %>
-        <li><%= link_to category.name, category_path(category) %></li>
+        <%= render 'item', category: category %>
     <% end %>
-</ul>
+</div>
 
 <div class="action-container">
     <%= link_to "Add Category", new_category_path, class: "action-button" %>

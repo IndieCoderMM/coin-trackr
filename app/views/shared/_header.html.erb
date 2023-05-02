@@ -1,6 +1,6 @@
 <header class="main-header">
     <% if back_link %>
-        <%= link_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left") + "Back", back_link, class: "nav-btn" %>
+        <%= link_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left"), back_link, class: "nav-btn" %>
     <% else %>
         <button type="button" class="nav-btn"><i class="fa fa-bars"></i></button>
     <% end %>

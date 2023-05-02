@@ -1,0 +1,9 @@
+<%= link_to category_path(category), class: "category-item" do %> 
+    <div class="category-data">
+        <div class="category-icon"><%= category.icon %></div>
+        <h2><%= category.name %></h2>
+    </div>
+    <div class="category-value">
+        <%= number_to_currency(category.total_expense) %>
+    </div>
+<% end %>

@@ -19,14 +19,22 @@ body {
 
 .container {
   height: 100%;
+  background-color: #ccc;
+  position: relative;
 }
 
 .action-container {
   padding: 0.5rem 1rem;
   background-color: var(--secondary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
 }
 
 .form-container {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -35,6 +43,9 @@ body {
 }
 
 .form-container form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -49,6 +60,11 @@ body {
 .form-control {
   width: 100%;
   padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-control option {
+  font-size: 1em;
 }
 
 /* Page Header  */
