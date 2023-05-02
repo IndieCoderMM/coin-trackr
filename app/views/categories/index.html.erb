@@ -2,7 +2,7 @@
 <section class="container">
 <div class="category-header">
     <p>Total Expense</p>
-    <p><%= number_to_currency(@categories.map(&:total_expense).sum) %></p>
+    <p><%= number_to_currency(@total_expense) %></p>
 </div>
 <div class="category-container">
     <% @categories.each do |category| %>

@@ -5,7 +5,13 @@
     <p><%= number_to_currency(@category.total_expense) %></p>
 </div>
 
+<div class="category-container">
+    <% @category.expenses.each do |expense| %>
+        <p><%= expense.name %> - <%= expense.amount %></p>
+    <% end %>
+</div>
+
 <div class="action-container">
-    <%= link_to "Add Expense", new_category_path, class: "action-button" %>
+    <%= link_to "Add Expense", new_category_expense_path(@category), class: "action-button" %>
 </div>
 </section>

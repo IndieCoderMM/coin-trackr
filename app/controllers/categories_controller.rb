@@ -2,11 +2,12 @@ class CategoriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @categories = current_user.categories.all 
+        @categories = current_user.categories.includes(:expenses).all 
+        @total_expense = Expense.joins(:categories).where(categories: @categories).distinct.sum(:amount)
     end
 
     def show
-        @category = Category.find(params[:id])
+        @category = Category.includes(:expenses).find(params[:id])
     end
 
     def new 
