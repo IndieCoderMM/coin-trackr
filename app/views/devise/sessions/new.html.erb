@@ -1,4 +1,4 @@
-<%= render 'devise/shared/header', title: "Sign In" %>
+<%= render 'shared/header', back_link: unauthenticated_root_path, title: "Sign In" %>
 
 <div class="auth-form">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

@@ -1,4 +1,4 @@
-<%= render 'devise/shared/header', title: "Reset Password" %>
+<%= render 'shared/header', back_link: unauthenticated_root_path, title: "Reset Password" %>
 
 <div class="auth-form">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>

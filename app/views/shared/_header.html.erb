@@ -1,9 +1,21 @@
 <header class="main-header">
     <% if back_link %>
-        <%= link_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left") + "Back", back_link %>
+        <%= link_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left") + "Back", back_link, class: "nav-btn" %>
     <% else %>
-        <button type="button" class="menu-btn"><i class="fa fa-bars"></i></button>
+        <button type="button" class="nav-btn"><i class="fa fa-bars"></i></button>
     <% end %>
     <h1><%= title %></h1>
-    <%= button_to content_tag(:i, "", class: "fa-sharp fa-solid fa-arrow-left") + "Log Out", destroy_user_session_path, method: :delete %>
+    <% if user_signed_in? %>
+        <%= button_to  content_tag(:i, "", class: "fa-solid fa-right-from-bracket"), destroy_user_session_path, method: :delete, class: "nav-btn text-right" %>
+    <% elsif controller_name != 'sessions' %>
+        <%= link_to content_tag(:i, "", class: "fa-solid fa-right-to-bracket"), new_user_session_path, class: "nav-btn text-right" %>
+    <% else %>
+        <%= link_to content_tag(:i, "", class: "fa-solid fa-user-plus"), new_user_registration_path, class: "nav-btn text-right" %>
+    <% end %>
 </header>
+<% if notice %>
+    <div class="alert alert-info"><%= notice %></div>
+<% end %>
+<% if alert %>
+    <div class="alert alert-danger"><%= alert %></div>
+<% end %>

@@ -51,6 +51,8 @@ body {
   padding: 0.5rem;
 }
 
+/* Page Header  */
+
 .main-header {
   background-color: var(--primary);
   color: #fff;
@@ -61,8 +63,28 @@ body {
 }
 
 .main-header h1 {
+  flex: 1;
   font-size: 1.4rem;
   text-align: center;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.25rem;
+  min-width: 50px;
+  background: none;
+  border: none;
+  font-size: inherit;
+}
+
+.nav-btn i {
+  margin: 0 3px;
+  font-size: 1.3em;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /* Button styles  */
@@ -140,4 +162,29 @@ body {
 .action-button:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+/* Alert message */
+.alert {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-info {
+  background-color: cornflowerblue;
+}
+
+.alert-warning {
+  background-color: goldenrod;
+}
+
+.alert-danger {
+  background-color: crimson;
 }
