@@ -3,7 +3,7 @@
         <div class="item-icon"><%= category.icon %></div>
         <div class="item-group">
             <h2 class="item-name"><%= category.name %></h2>
-            <p class="item-data"><%= pluralize(category.expenses.count, "Entry") %></p>
+            <p class="item-data"><%= pluralize(category.expenses.length, "Entry") %></p>
         </div>
     </div>
     <div class="item-group">

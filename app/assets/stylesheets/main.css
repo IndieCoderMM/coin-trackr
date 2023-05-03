@@ -17,7 +17,6 @@
 body {
   font-family: 'Rubik', sans-serif;
   height: 100vh;
-  background-color: darkorange;
   overflow: hidden;
 }
 
@@ -29,11 +28,10 @@ body {
 .action-container {
   padding: 1rem;
   background-color: var(--secondary);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: fit-content;
 }
 
 /* Page Header  */

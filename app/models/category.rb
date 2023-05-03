@@ -6,6 +6,6 @@ class Category < ApplicationRecord
   validates :icon, presence: true
 
   def total_expense
-    self.expenses.sum(:amount)
+    expenses.sum(:amount)
   end
 end
