@@ -57,7 +57,7 @@ A mobile web app that allows user to track their expenses by creating custom cat
 
 ## 🚀 Live Demo  <a name="live-demo"></a>
 
-You can visit the live version on ...
+You can visit the [live website here](https://cointrackr.onrender.com).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,7 +158,7 @@ If you like this project, please consider giving it a ⭐.
 
 ## 🙏 Acknowledgements
 
-I would like to thank ....
+This app was designed based on an original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella). I would like to thank Gregoire Vella for this inspiring design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

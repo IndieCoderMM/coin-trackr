@@ -79,9 +79,15 @@
 .del-btn {
   background: none;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: crimson;
   width: 100%;
   text-align: right;
   margin-top: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.del-btn:hover,
+.del-btn:active {
+  transform: scale(1.1);
 }
