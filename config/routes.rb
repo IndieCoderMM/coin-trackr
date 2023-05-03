@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
-  
-  get '/splash', to: 'public#splash'
+
+  authenticated :user do 
+    root 'categories#index', as: :authenticated_root
+  end
+
+  unauthenticated do 
+    root 'public#splash', as: :unauthenticated_root
+  end
+
+  resources :categories, only: [:index, :new, :create, :destroy, :show] do 
+    resources :expenses, only: [:new, :create, :destroy] 
+  end
+
 end

@@ -1,0 +1,17 @@
+<%= render 'shared/header', title: "Categories", back_link: false %>
+<section class="container">
+<div class="total-header">
+    <% expense_count = @unique_expenses.size %>
+    <p>Spending: <%= number_to_currency(@total_expense) %></p>
+    <p>Unique <%= expense_count == 1 ? "Entry: " : "Entries: " %><%= expense_count %></p>
+</div>
+<div class="items-container">
+    <% @categories.each do |category| %>
+        <%= render 'item', category: category %>
+    <% end %>
+</div>
+
+<div class="action-container">
+    <%= link_to "Add Category", new_category_path, class: "action-button" %>
+</div>
+</section>

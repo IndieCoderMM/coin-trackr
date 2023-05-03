@@ -1,0 +1,14 @@
+<%= link_to category_path(category), class: "item-card" do %> 
+    <div class="item-meta">
+        <div class="item-icon"><%= category.icon %></div>
+        <div class="item-group">
+            <h2 class="item-name"><%= category.name %></h2>
+            <p class="item-data"><%= pluralize(category.expenses.length, "Entry") %></p>
+        </div>
+    </div>
+    <div class="item-group">
+        <p class="item-value">
+            <%= number_to_currency(category.total_expense) %>
+        </p>
+    </div>
+<% end %>
