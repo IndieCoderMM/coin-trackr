@@ -13,11 +13,12 @@ class ExpensesController < ApplicationController
         @expense.author = current_user
 
         if @expense.save
-            flash[:success] = 'Expense added successfully!'
+            flash[:success] = "You've just added a new expense."
             redirect_to category_path(@category)
         else 
-            flash[:alert] = 'Please try again!'
-            render :new 
+            error = @expense.errors.full_messages[0]
+            flash[:error] = "#{error}. Please try again."
+            redirect_to new_category_expense_path(@category)
         end
     end
 
@@ -26,7 +27,7 @@ class ExpensesController < ApplicationController
         @expense = Expense.find(params[:id])
         @expense.destroy
         
-        flash[:success] = 'Removed an expense item!'
+        flash[:success] = "Expense item has been removed."
         redirect_to category_path(@category)
     end
 

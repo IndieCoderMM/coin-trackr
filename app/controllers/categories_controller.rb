@@ -21,11 +21,12 @@ class CategoriesController < ApplicationController
         @category.user= current_user
 
         if @category.save
-            flash[:success] = 'Category created successfully!'
+            flash[:success] = 'New category has been created.'
             redirect_to categories_path
         else 
-            flash[:alert] = 'Please try again!'
-            render :new 
+            error = @category.errors.full_messages[0]
+            flash[:error] = "#{error}. Please try again."
+            redirect_to new_category_path 
         end
     end
 
@@ -33,7 +34,7 @@ class CategoriesController < ApplicationController
         @category = Category.find(params[:id])
         @category.destroy
         
-        flash[:success] = 'Deleted a category item!'
+        flash[:success] = "#{@category.name} category has been deleted."
         redirect_to categories_path
     end
 
