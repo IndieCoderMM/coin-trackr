@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: coin_trackr_production
   username: coin_trackr
   password: <%= ENV["COIN_TRACKR_DATABASE_PASSWORD"] %>
