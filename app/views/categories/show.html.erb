@@ -2,7 +2,7 @@
 <section class="container">
 <div class="total-header">
     <p>Spending: <%= number_to_currency(@category.total_expense) %></p>
-    <%= button_to content_tag(:i, "", class: "fa-solid fa-trash"), category_path(@category), method: :delete, class: 'del-btn' %>
+    <%= button_to content_tag(:i, "", class: "fa-solid fa-trash")+ "Delete", category_path(@category), method: :delete, class: 'del-btn' %>
 </div>
 
 <% if @expenses.empty? %>

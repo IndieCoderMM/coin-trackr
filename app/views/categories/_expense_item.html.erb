@@ -2,9 +2,9 @@
     <div class="item-meta">
         <div class="item-icon">💸</div>
         <div class="item-group">
-            <h2 class="item-name"><%= expense.name %></h2>
+            <h3 class="item-name"><%= expense.name %></h3>
             <p class="item-data">
-                <%= expense.updated_at.to_datetime.strftime("%B %d, %Y at %I:%M %p") %>
+                <%= expense.updated_at.to_datetime.strftime("%B %d, %Y") %>
             </p>
         </div>
     </div>
@@ -12,6 +12,6 @@
         <p class="item-value">
             <%= number_to_currency(expense.amount) %>
         </p>
-        <%= button_to content_tag(:i, "", class: "fa-solid fa-square-minus"), category_expense_path(category, expense), method: :delete, class: 'del-btn' %>
+        <%= button_to content_tag(:i, "", class: "fa-solid fa-square-minus") + "Remove", category_expense_path(category, expense), method: :delete, class: 'del-btn' %>
     </div>
 </div>

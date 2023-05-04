@@ -28,7 +28,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     flash[:success] = 'Expense item has been removed.'
-    redirect_to category_path(@category)
+    redirect_back(fallback_location: authenticated_root_path)
   end
 
   private

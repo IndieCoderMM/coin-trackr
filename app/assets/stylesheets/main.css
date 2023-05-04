@@ -16,7 +16,14 @@
 
 body {
   font-family: 'Rubik', sans-serif;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -47,7 +54,7 @@ body {
 .main-header h1 {
   flex: 1;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -60,10 +67,12 @@ body {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5;
   text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   border-radius: 0.25rem;
@@ -110,7 +119,7 @@ body {
   padding: 1rem;
   text-align: center;
   text-decoration: none;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -174,7 +183,7 @@ body {
 /* Note box  */
 
 .note-container {
-  background-color: #f3f4f8;
+  background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
   display: flex;

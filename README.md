@@ -9,7 +9,7 @@
 <summary>Table of Contents</summary>
 
 - [💰 Coin Trackr - Budget App ](#-coin-trackr---budget-app-)
-  - [📸 Screenshot ](#-screenshot-)
+  - [📸 Screenshots ](#-screenshots-)
   - [🧰 Tech Stack  ](#-tech-stack--)
   - [✨ Key Features  ](#-key-features--)
   - [🚀 Live Demo  ](#-live-demo--)
@@ -30,28 +30,30 @@
 
 # 💰 Coin Trackr - Budget App <a name="about-project"></a>
 
-A mobile web app that allows user to track their expenses by creating custom categories and adding transactions to the categories.
+A mobile web application designed to simplify expense tracking for users. It allows user to create custom categories and add transactions to those categories to keep track of how they spent money. The app also provides a secure authentication system, allowing users to log in with their email and ensuring the privacy of their information.
 
-## 📸 Screenshot <a name="screenshot"></a>
+## 📸 Screenshots <a name="screenshot"></a>
 
-<img src="https://via.placeholder.com/468x300?text=App+Screenshot+Here" width=468 height=300 alt="screenshot" />
+<img src="./app_mock_ups.png" alt="screenshot" width=800 />
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧰 Tech Stack  <a name="tech-stack"></a>
 
-- Ruby on Rails
-- Devise
-- PostgreSQL
+- Back-end 💻: Ruby on Rails, PostgreSQL
+- Front-end 🎨: HTML, CSS, JavaScript
+- Authentication 🔐: Devise gem
+- Deployment 🚀: Render
+- Testing 🧪: Rspec, Capybara
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ✨ Key Features  <a name="key-features"></a>
 
-- Easily create categories to track
-- View transaction history on each category
-- Real time budget tracking
+- Custom categories: Create your own categories to track expenses
+- Transaction: Easily add/remove expenses
+- Mobile-first Design: Optimized for mobile devices 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,17 +138,17 @@ I am always looking for ways to improve my project. If you have any suggestions 
 
 ## 🎯 Future Features  <a name="future-features"></a>
 
+- [x] Side menu
+- [ ] Edit items
 - [ ] Desktop version
-- [ ] Side menu
-- [ ] More features
+- [ ] Resetable password
+- [ ] Email confirmation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contribution  <a name="contribution"></a>
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/IndieCoderMM/coin-trackr/issues).
+Contributions, issues, and feature requests are welcome! 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,6 +161,7 @@ If you like this project, please consider giving it a ⭐.
 ## 🙏 Acknowledgements
 
 This app was designed based on an original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella). I would like to thank Gregoire Vella for this inspiring design.
+- [App Design Template](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

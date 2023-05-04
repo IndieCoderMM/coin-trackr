@@ -18,11 +18,14 @@
 
 .side-header {
   display: flex;
-  padding: 0.5rem;
+  align-items: center;
+  padding: 0.25rem 1rem;
 }
 
 .side-header .brand {
   padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .profile-container {
@@ -30,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   margin: 1rem 0 2rem;
 }
 
@@ -37,8 +41,10 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: solid 1px #fff;
-  background-color: var(--light-green);
+  border: solid 3px var(--green);
+  box-shadow: 0 3px 8px #3335;
+  background-color: #fff;
+  color: var(--dark-blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,24 +66,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   font-size: 1.1rem;
   width: 100%;
   text-decoration: none;
   color: #fff;
 }
 
+.action-group:hover {
+  background-color: var(--dark-blue);
+}
+
 .action-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: solid 1px #fff;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: solid 2px #fff;
   border-radius: 50%;
   font-size: 1.3rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
+  margin: 0 1rem;
 }
 
 .action-group p {
