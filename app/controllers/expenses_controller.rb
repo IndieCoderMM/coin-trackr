@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
 
   def new
     @categories = current_user.categories
-    @category = Category.find(params[:category_id])
+    @category = @categories.select { |i| i.id == params[:category_id].to_i }[0]
     @expense = Expense.new
   end
 
