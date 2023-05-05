@@ -1,10 +1,13 @@
-<%= render 'shared/header', title: @category.name, back_link: categories_path %>
+<%= render 'shared/header', title: "#{@category.icon} #{@category.name}", back_link: categories_path %>
 <section class="container">
 <div class="total-header">
     <p>Spending: <%= number_to_currency(@total_amount) %></p>
-    <%= button_to content_tag(:i, "", class: "fa-solid fa-trash")+ "Delete", category_path(@category), method: :delete, class: 'del-btn' %>
+    <p><%= @expenses.size == 1 ? "Entry: " : "Entries: " %><%= @expenses.size %></p>
 </div>
-
+<div class="category-actions">
+    <%= link_to content_tag(:i, "", class: "fa-solid fa-pencil")+ "Edit Category", edit_category_path(@category), class: 'cat-action edit-btn' %>
+    <%= button_to content_tag(:i, "", class: "fa-solid fa-trash")+ "Delete Category", category_path(@category), method: :delete, class: 'cat-action del-btn' %>
+</div>
 <% if @expenses.empty? %>
     <div class="note-container">
         <h2 class="note-title">No Expenses Yet!</h2> 

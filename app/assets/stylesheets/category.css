@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.1rem;
-  border-bottom: solid 1px #00000097;
+  box-shadow: 0 2px 5px -2px #3331;
 }
 
 .total-header p {
@@ -81,21 +81,44 @@
   color: var(--dark);
 }
 
-.del-btn {
+.category-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.cat-action {
+  display: inline-block;
   background: #fff;
-  border: solid 1px crimson;
+  border: solid 1px;
   border-radius: 3px;
-  color: crimson;
   padding: 3px 5px;
-  width: 100%;
   text-align: right;
-  font-size: 1rem;
+  font-size: 1em;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
-.del-btn i {
+.cat-action i {
   font-size: 1.2em;
-  margin-right: 3px;
+  margin-right: 0.5rem;
+}
+
+.edit-btn {
+  color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+.edit-btn:hover,
+.edit-btn:active {
+  background-color: var(--dark-blue);
+  color: #fff;
+}
+
+.del-btn {
+  border-color: crimson;
+  color: crimson;
 }
 
 .del-btn:hover,
