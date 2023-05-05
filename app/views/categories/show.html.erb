@@ -1,7 +1,7 @@
 <%= render 'shared/header', title: @category.name, back_link: categories_path %>
 <section class="container">
 <div class="total-header">
-    <p>Spending: <%= number_to_currency(@category.total_expense) %></p>
+    <p>Spending: <%= number_to_currency(@total_amount) %></p>
     <%= button_to content_tag(:i, "", class: "fa-solid fa-trash")+ "Delete", category_path(@category), method: :delete, class: 'del-btn' %>
 </div>
 
@@ -13,7 +13,7 @@
 <% else %>
     <div class="items-container">
         <% @expenses.each do |expense| %>
-            <%= render 'expense_item', category: expense.categories[0], expense: expense %>
+            <%= render 'expense_item', category: @category, expense: expense %>
         <% end %>
     </div>
 <% end %>

@@ -9,7 +9,7 @@
   --light-blue: #a4e2ff;
   --dark-blue: #276988;
   --secondary: #5fb523;
-  --light-green: #37c26f;
+  --light-green: #b6fa94b9;
   --dark-green: #27884e;
   --dark: #434b54;
 }
@@ -189,7 +189,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem;
+  margin: 1rem auto;
   gap: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;

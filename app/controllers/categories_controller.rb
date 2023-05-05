@@ -2,14 +2,15 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @categories = Category.includes(:expenses).where(user: current_user)
-    @unique_expenses = Expense.joins(:categories).where(categories: @categories).distinct
-    @total_expense = @unique_expenses.sum(:amount)
+    @categories = current_user.categories.includes(:expenses)
+    @unique_expenses = current_user.expenses.joins(:categories).distinct
+    @total_expense = @unique_expenses.map(&:amount).sum
   end
 
   def show
-    @category = Category.includes(:expenses).find(params[:id])
-    @expenses = @category.expenses.order(updated_at: :desc)
+    @category = current_user.categories.includes(:expenses).find(params[:id])
+    @expenses = @category.expenses.sort { |a, b| b.updated_at <=> a.updated_at }
+    @total_amount = @expenses.map(&:amount).sum
   end
 
   def new
