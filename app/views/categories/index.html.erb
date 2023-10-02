@@ -13,7 +13,8 @@
 <% else %>
     <div class="items-container">
         <% @categories.each do |category| %>
-            <%= render 'item', category: category %>
+            <%= render 'item', category: category, 
+            total: @unique_expenses.map {|i| category.expenses.include?(i) ? i.amount : 0 }.sum %>
         <% end %>
     </div>
 <% end %>

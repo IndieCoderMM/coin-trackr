@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
 
   def new
     @categories = current_user.categories
-    @category = Category.find(params[:category_id])
+    @category = @categories.select { |i| i.id == params[:category_id].to_i }[0]
     @expense = Expense.new
   end
 
@@ -28,7 +28,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     flash[:success] = 'Expense item has been removed.'
-    redirect_to category_path(@category)
+    redirect_back(fallback_location: authenticated_root_path)
   end
 
   private

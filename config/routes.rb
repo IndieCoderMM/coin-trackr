@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     root 'public#splash', as: :unauthenticated_root
   end
 
-  resources :categories, only: [:index, :new, :create, :destroy, :show] do 
+  resources :categories, only: [:index, :new, :create, :edit, :update, :destroy, :show] do 
     resources :expenses, only: [:new, :create, :destroy] 
   end
 

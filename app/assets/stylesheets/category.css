@@ -5,11 +5,13 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.1rem;
-  border-bottom: solid 1px #00000097;
+  box-shadow: 0 2px 5px -2px #3331;
 }
 
 .total-header p {
   font-size: 1em;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .items-container {
@@ -38,7 +40,7 @@
 }
 
 .item-card:hover {
-  border-color: var(--light-blue);
+  box-shadow: 5px 7px 12px -5px rgba(0, 0, 0, 0.1);
 }
 
 .item-meta {
@@ -74,20 +76,53 @@
 
 .item-value {
   font-size: 1.1em;
+  font-weight: 400;
+  text-align: right;
+  color: var(--dark);
+}
+
+.category-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.cat-action {
+  display: inline-block;
+  background: #fff;
+  border: solid 1px;
+  border-radius: 3px;
+  padding: 3px 5px;
+  text-align: right;
+  font-size: 1em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cat-action i {
+  font-size: 1.2em;
+  margin-right: 0.5rem;
+}
+
+.edit-btn {
+  color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+.edit-btn:hover,
+.edit-btn:active {
+  background-color: var(--dark-blue);
+  color: #fff;
 }
 
 .del-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+  border-color: crimson;
   color: crimson;
-  width: 100%;
-  text-align: right;
-  margin-top: 0.25rem;
-  transition: all 0.2s ease;
 }
 
 .del-btn:hover,
 .del-btn:active {
-  transform: scale(1.1);
+  background-color: crimson;
+  color: #fff;
 }
